@@ -30,4 +30,8 @@ export class DataService {
     return this.questions;
   }
 
+  addQuestion (question: Question) {
+    this.questions.unshift(question);
+  }
+
 }
