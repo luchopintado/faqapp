@@ -1,12 +1,1 @@
-<div class="question" *ngFor="let quest of questions">
-  <div class="card">
-    <div class="card-header">
-        {{ quest.text }}
-        <a href="#" class="btn btn-link" (click)="quest.hide = !quest.hide">{{quest.hide ? 'Show' : 'Hide'}}</a>
-    </div>
-    <div class="card-body" [hidden]="quest.hide">
-      <p class="card-text">{{ quest.answer }}</p>
-    </div>
-  </div>
-  <br/>
-</div>
+<app-question *ngFor="let quest of questions" [question]="quest"></app-question>
